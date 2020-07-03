@@ -1,0 +1,18 @@
+<div *ngFor="let article of articles">
+  <textarea [(ngModel)]="article.title" cols="70" id="article-title"></textarea>
+  <textarea [(ngModel)]="article.url" cols="70" id="article-url"></textarea>
+</div>
+<div>
+  <input type="text" id="title">
+  <input type="text" id="url">
+  <button (click)="addArticle()">Add</button>
+</div>
+
+<h2>Today's article</h2>
+<hr>
+<div *ngFor="let article of articles">
+  <a href="{{article.url}}" target="_blank">{{article.title}}</a>
+  <app-likes></app-likes>
+</div>
+<hr>
+@CodeGym, 2019
